@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="table">
+        <div class="headers">
+            <div class="cell" *ngFor="let key of keys" (click)="onHeaderClick(key)">{{key | uppercase}}</div>
+        </div>
+       <ng-container *ngIf="ascorder == null , else order ">
+         <div class="rowcell" *ngFor="let student of studentData2">
+            <div class="cell">{{student.name}}</div>
+            <div class="cell">{{student.class}}</div>
+            <div class="cell">{{student.section}}</div>
+            <div class="cell">{{student.sub1}}</div>
+            <div class="cell">{{student.sub2}}</div>
+            <div class="cell">{{student.sub3}}</div>
+          </div>
+
+       </ng-container>
+       <ng-template #order>
+        <div class="rowcell" *ngFor="let student of studentData | sort : columnName : ascorder">
+            <div class="cell">{{student.name}}</div>
+            <div class="cell">{{student.class}}</div>
+            <div class="cell">{{student.section}}</div>
+            <div class="cell">{{student.sub1}}</div>
+            <div class="cell">{{student.sub2}}</div>
+            <div class="cell">{{student.sub3}}</div>
+         </div>
+       </ng-template>
+       <!-- <div class="rowcell" *ngFor="let student of studentData | sort : columnName : ascorder">
+          <div class="cell">{{student.name}}</div>
+          <div class="cell">{{student.class}}</div>
+          <div class="cell">{{student.section}}</div>
+          <div class="cell">{{student.sub1}}</div>
+          <div class="cell">{{student.sub2}}</div>
+          <div class="cell">{{student.sub3}}</div>
+       </div> -->
+      </div> 
+</div>
+
+
+

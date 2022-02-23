@@ -1,0 +1,6 @@
+<div class="col-6">
+   <!-- <p >{{ text }} {{timeStampData | date : 'medium'  }}</p> -->
+      <ng-container *ngFor="let timestampdata of timeStampObj">
+         <p *ngIf="timestampdata.timestamp"> {{ timestampdata.start === true ? 'Started at' : 'Paused at' }} {{timestampdata.timestamp | date : 'medium'}} </p>
+     </ng-container>
+</div>

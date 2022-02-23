@@ -1,0 +1,19 @@
+.col-6{
+    border: 1px solid #ccc;
+    padding: 50px;
+    font-size: 14px
+}
+
+label{
+    padding: 10px;
+}
+
+input{
+    padding: 10px;
+}
+
+button{
+    margin: 20px;
+}
+
+

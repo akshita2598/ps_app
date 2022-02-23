@@ -1,0 +1,11 @@
+<div class="col-6">
+   <div>
+      <label for="timer">Enter timer value</label>
+      <input name="timer" [attr.disabled]="disabled ? true : null" [(ngModel)]="timerValue">
+   </div> 
+   <div>
+    <button class="btn btn-primary" [disabled]="!timerValue" (click)="onStartorPauseTimer()">Start/Pause</button>
+    <button class="btn btn-secondary" (click)="onReset()">Reset</button>
+   </div>
+   
+</div>

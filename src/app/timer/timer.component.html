@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="col-6 mt30">
+        <app-displaytimer [timerdata]="timer" [startTimerValue]="startTimer"></app-displaytimer>
+        <app-inputtimer (timerValueEvent)="getTimerValue($event)" (timerStampEvent)="getTimerStampValue($event)" (startTimerEvent)="getStartTimerValue($event)" (startClicks)="getstartClicks($event)" (pauseClicks)="getpauseClicks($event)"></app-inputtimer>
+    </div>
+    <div class="col-6 mt30">
+        <app-logtimestamp [timeStampData]="timeStamp" [startTimerValue]="startTimer"></app-logtimestamp>  
+        <app-logbuttonclick [startClicks]="startClickCount" [pauseClicks]="pauseClickCount"></app-logbuttonclick> 
+    </div>            
+</div>

@@ -1,0 +1,7 @@
+<h5>Dynamic div</h5>
+
+<div id="content"  (window:scroll)="onScroll($event)">
+   <div class="childDiv" *ngFor="let container of containers ; let i = index">
+        <button type="button" class="btn btn-primary" (click)="alertOnDiv(i)">CLICK</button>
+   </div>
+</div>

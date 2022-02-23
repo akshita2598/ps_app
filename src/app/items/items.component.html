@@ -1,0 +1,51 @@
+<div>
+    <div class="filters mb">
+         <div class="btn-group">
+            <button type="button" class="btn btn-primary" (click)="setLayout('grid')">Grid</button>
+            <button type="button" class="btn btn-primary" (click)="setLayout('list')">List</button>
+         </div>
+         <div>
+            <select (change)="sort($event)">
+              <option value="">Price</option>
+              <option value="1">Low to High</option>
+              <option value="2">High to Low</option>
+            </select>
+         </div>
+    </div>
+
+    <div class="container" *ngIf="layout === 'grid'">
+     <div class="row">
+       <div class="col-sm-3" *ngFor="let product of dataList">
+           <div class="product mb">
+               <img class="mb" [src]="product.img">
+               <p>{{product.productName}}</p>
+               <p class="bold">${{product.price}}</p>
+                 <span class="fa fa-star checked"></span>
+                 <span class="fa fa-star checked"></span>
+                 <span class="fa fa-star checked"></span>
+                 <span class="fa fa-star"></span>
+                 <span class="fa fa-star"></span>
+           </div>
+       </div>
+     </div>
+    </div>
+
+    <div class="container" *ngIf="layout === 'list'">
+        <div class="row " >
+          <div class="col-sm-6 mb" *ngFor="let product of dataList">
+              <div class="product product-list ">
+                  <img class="mb" [src]="product.img">
+                  <p>{{product.productName}}</p>
+                  <p class="bold">${{product.price}}</p>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star"></span>
+                     <span class="fa fa-star"></span>
+              </div>
+          </div>
+        </div>
+       </div>
+
+
+</div>

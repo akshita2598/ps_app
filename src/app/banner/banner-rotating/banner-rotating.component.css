@@ -1,0 +1,25 @@
+.col{
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+p{
+    text-align: center;
+    animation: rotation 8s infinite linear;
+    color: coral;
+    font-weight: bold;
+    font-size:xx-large
+}
+
+.centre{
+    text-align: center;
+}
+
+@keyframes rotation{
+    from{
+        transform: rotateX(0deg)
+    }
+    to{
+        transform: rotateY(360deg);
+    }
+}
