@@ -30,9 +30,6 @@ export class LogtimestampComponent implements OnInit {
     // }
     if(JSON.stringify(this.timeStampData) !== JSON.stringify({})){
       this.timeStampObj.push(this.timeStampData)}
-      // else{
-      //   this.timeStampObj=null
-      // }
   }
 
   

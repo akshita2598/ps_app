@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@angular/material/prebuilt-themes/purple-green.css";
+
+.blue-snackbar {
+    font-weight: bold;
+    color:#7f8185
+}
+
+.blue-snackbar .mat-simple-snackbar-action {
+    color: #fff;
+    background-color: #2196F3;
+    border-radius: 4px;
+}

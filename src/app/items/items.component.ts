@@ -18,11 +18,9 @@ export class ItemsComponent implements OnInit {
 
   setLayout(value:string){
     this.layout = value ;
-    console.log(this.layout);
   }
 
   sort(event){
-     console.log(event.target.value);
      switch(event.target.value){
        case '1':
           {

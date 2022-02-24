@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-dynamicdiv',
@@ -6,7 +7,6 @@ import { Component, HostListener, OnInit } from '@angular/core';
   styleUrls: ['./dynamicdiv.component.css']
 })
 export class DynamicdivComponent implements OnInit {
-
 
   containers : any = [];
   @HostListener('window:scroll') onScroll(e:Event):void{
@@ -20,20 +20,21 @@ export class DynamicdivComponent implements OnInit {
     this.containers.push(this.containers.length);
   }
 
-
-  constructor() { }
+  constructor(public snackBar : MatSnackBar) { }
 
   ngOnInit(): void {
     if(window.screen.width >= 480) {
-      console.log(window.screen.width , window.screen.height);
+      //console.log(window.screen.width , window.screen.height);
       this.add();
     }
   }
 
- 
-  alertOnDiv(i){
-    //console.log(i)
-    window.alert(`Button ${i+1} is clicked!`)
+  openSnackBar(message , action: string) {
+    this.snackBar.open(message, action, {
+      duration: 3000,
+      panelClass: 'blue-snackbar',
+      verticalPosition: 'top'
+    });
   }
 
 }
