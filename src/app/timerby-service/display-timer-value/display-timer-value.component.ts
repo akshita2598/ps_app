@@ -22,7 +22,6 @@ export class DisplayTimerValueComponent implements OnInit {
    
     this.timerService.timer.subscribe((data)=> {
       this.timerdata=data;
-      console.log(this.timerdata);
       if(!this.timerdata){this.OnTimerChanges()};
     });
     this.timerService.startTimerValue.subscribe((data)=>{

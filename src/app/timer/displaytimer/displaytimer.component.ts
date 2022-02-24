@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, OnChanges, OnInit, ViewChild } from '@angular/core';
+import { Component,Input, OnChanges, OnInit} from '@angular/core';
 //import { clearInterval } from 'timers';
 
 @Component({
@@ -12,8 +12,6 @@ export class DisplaytimerComponent implements OnInit , OnChanges {
   @Input() startTimerValue : boolean;
   timerval : any ;
   startTimer: any ;
-
-  @ViewChild('value',{static: false})timercount : ElementRef ;
 
   constructor() { }
 
@@ -31,11 +29,9 @@ export class DisplaytimerComponent implements OnInit , OnChanges {
               this.timerval = 0;
           }
           else{
-            //this.timercount.nativeElement.innerHTML=this.timerdata
             this.timerval = this.timerdata;
           };
           this.timerdata-=1;
-          // console.log(this.startTimer);
        },1000)
     }else if(this.startTimerValue === false){
       if(this.startTimer){

@@ -24,7 +24,6 @@ export class DynamicdivComponent implements OnInit {
 
   ngOnInit(): void {
     if(window.screen.width >= 480) {
-      //console.log(window.screen.width , window.screen.height);
       this.add();
     }
   }

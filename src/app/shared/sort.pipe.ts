@@ -31,7 +31,6 @@ export class SortPipe implements PipeTransform {
         else{
             sortedArr = studentData;
         }
-       //console.log(sortedArr); 
        return sortedArr; 
        
     }
